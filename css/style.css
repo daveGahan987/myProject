@@ -70,12 +70,14 @@ a{
     padding-left: 5px;
     padding-top: 10px;
     border-radius: 4px;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
+
 .menu a:hover{
     background: rgb(249, 253, 27);
-    color: rgb(255, 255, 255)255);
+    color: rgb(255, 255, 255);
 }
+
 .menu{
     margin: 0 auto;
     width: 500px;
@@ -160,9 +162,7 @@ label ~ img{
 /* родственный селлектор финиш */
 
 /* соседний селлектор */
-label + img{
-    /* border-radius: 100px; */
-}
+
 q{
     color: blue;
 }
@@ -261,14 +261,7 @@ div[class ^= 'skill']{
     border-bottom-left-radius: 30%;
 
 }
-@media screen and (max-width: 850px) {
-    .blog{
-        flex-direction: column;
-    }
-    aside{
-        order: 0;
-    }
-}
+
 /* cart-box start */
 .cart-box{
     width: 80%;
@@ -314,18 +307,8 @@ div[class ^= 'cart']{
 .cart-4{
     grid-area: cart-4;
 }
-@media screen and (max-width: 960px) {
-    .cart-box{
-        grid-template-rows: 170px;
-    }
-}
-@media screen and (max-width: 800px) {
-    .cart-box{
-        grid-template-areas: 'cart-1' 'cart-2' 'cart-3' 'cart-4' 'cart-5';
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
-    }
-}
+
+
 
 .card-carousel{
     width: 80%;
@@ -567,14 +550,7 @@ header{
     cursor: pointer;
     display: none;
 }
-@media screen and (max-width: 980px){
-    .menu-burger{
-        display: block;
-    }
-    .menu-none{
-        display: none;
-    }
-}
+
 /* feature style start */
 .features-wrap{
     min-height: 885px;
@@ -686,3 +662,71 @@ header{
     left: -70px;
 }
 /* feature style finish */
+
+/* media start  */
+@media screen and (max-width: 980px){
+    .menu-burger{
+        display: block;
+    }
+    .menu-none{
+        display: none;
+    }
+}
+@media screen and (max-width: 960px) {
+    .cart-box{
+        grid-template-rows: 170px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .blog{
+        flex-direction: column;
+    }
+    aside{
+        order: 0;
+    }
+    .carousel-control-next{
+        right: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cart-box{
+        grid-template-areas: 'cart-1' 'cart-2' 'cart-3' 'cart-4' 'cart-5';
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+}
+@media screen and (max-width: 600px){
+    .table-rating{
+        width: 100%;
+        font-size: 12px;
+    }
+    .table-rating th, .table-rating td{
+        border: 1px solid gray;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 900px){
+    .form-poll{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 770px) {
+    .features-content{
+        width: 100%;
+    }
+    .features{
+        grid-template-areas: 'o f' 'm s';
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .visual-section-1{
+        display: none;
+    }
+    .visual-section-2{
+        height: 100px;
+        background: transparent;
+        padding-top: 0;
+    }
+    
+}
+/* media finish */
